@@ -1,2 +1,2 @@
-worker : celery -A tasks worker -l INFO -P threads
+worker: celery worker —app=tasks.app
 celery_beat: celery beat -A tasks
