@@ -19,7 +19,7 @@ app = Celery("tasks", broker=BROKER_SERVER)
 app.conf.beat_schedule = {
     'run_scraper_task-every-hour': {
         'task': 'tasks.run_scraper_task',
-        'schedule': crontab(),
+        'schedule': crontab(minute=0),
     },
 }
 app.conf.timezone = 'Asia/Seoul'
