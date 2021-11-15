@@ -6,7 +6,8 @@ from scrapy import signals
 from scrapy.crawler import Crawler
 from twisted.internet import reactor
 from scrapy.utils.project import get_project_settings
-from multiprocessing import Process
+# from multiprocessing import Process
+from billiard import Process
 
 from beach_forecast_scraper.spiders.forecast_spider import ForecastSpider
 from config import BROKER_SERVER
