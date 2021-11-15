@@ -1,1 +1,1 @@
-worker: celery -A tasks worker -l INFO -P threads
+worker: celery -A tasks worker -l INFO
